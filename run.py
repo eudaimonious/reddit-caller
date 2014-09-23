@@ -1,6 +1,6 @@
 import os
-import praw
 from flask import Flask, Response, render_template
+import praw
 
 app = Flask(__name__)
 
