@@ -19,7 +19,7 @@ def get_top_submission():
   return headline
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def home():
   return Response(render_template('reddit-top.xml', headline=get_top_submission()), mimetype='text/xml')
 
