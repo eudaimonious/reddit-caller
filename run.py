@@ -5,17 +5,12 @@ import praw
 app = Flask(__name__)
 
 def get_top_submission():
+  # connect to reddit api
   user_agent = "github.com/eudaimonious/reddit-caller by /u/eudaimonious"
-  # connecting to reddit api
   r = praw.Reddit(user_agent=user_agent)
-  # getting top submission
-  submissions = r.get_top(limit=1)
-  # converting from generator
-  sub_list = [str(x) for x in submissions]
-  top = sub_list[0]
-  # grabbing just the headline
-  start = top.rfind(':') + 2
-  headline = top[start:]
+  # get title of top submission
+  for submission in r.get_top(limit=1):
+    headline = str(submission.title)
   return headline
 
 
