@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Response>
-     <Say><![CDATA[Good afternoon Brian. Margaret Scott would like you to know that the top front page submission on Reddit is: {{ headline }}]]></Say>
+     <Say><![CDATA[Good afternoon Dan. Margaret Scott would like you to know that the top front page submission on Reddit is: {{ headline }}]]></Say>
 </Response>
